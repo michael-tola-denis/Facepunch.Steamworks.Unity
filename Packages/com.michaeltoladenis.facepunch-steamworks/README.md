@@ -47,8 +47,10 @@ settings are retained, so Unity selects them for the active editor and build tar
 
 ## Usage
 
-Create a `steam_appid.txt` next to the built executable (or use your test App ID
-while developing), then initialize and run callbacks from your game code:
+Initialize with your Steam App ID and run callbacks from your game code. You do
+not need a `steam_appid.txt` file -- `SteamClient.Init` sets the `SteamAppId` and
+`SteamGameId` environment variables for you; just make sure the Steam client is
+running and logged in:
 
 ```csharp
 using Steamworks;

@@ -32,8 +32,9 @@ For a local checkout, add the package to your Unity project's
 ```
 
 The package selects the correct plugin binaries for Windows x86/x64, Linux, and
-macOS. Before running your game, use your Steam App ID and ensure
-`steam_appid.txt` is available beside the executable during development. 
+macOS. Pass your Steam App ID to `SteamClient.Init(appid)` and make sure the Steam
+client is running and logged in. A `steam_appid.txt` file is not required --
+`Init` sets the `SteamAppId`/`SteamGameId` environment variables itself.
 
 ## Features
 
